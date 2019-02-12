@@ -1,0 +1,53 @@
+/* General Style */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+font-family: 'Roboto', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  margin: 0.75rem 0;
+}
+
+/* Style for NavBar Classes */
+.text-primary{
+  color: #f73d3d;
+}
+/* Navbar */
+#navbar{
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 1rem;
+}
+/* The Links Inside The Navbar */
+#navbar ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #fff;
+  padding:0.75rem;
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover{
+  background: #f73d3d;
+  border-radius: 5px;
+}
