@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--fontawesome.con CDN for icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  <!-- Main Styling File -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Mobile Styling File -->
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+
+  <!-- WideScreen Styling File -->
+  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="css/widescreen.css">
+
+  <title>Indoor Traffic System</title>
+</head>
+<body id="home">
+
+  <!-- The Navbar -->
+  <nav id="navbar">
+    <h1 class="logo">
+      <span class="text-primary">
+      <a href="#home"><i class="fas fa-city"></i> Indoor Traffic 
+      </span></a>System
+    </h1>
+    <ul>
+      <li></li>
+      <li><a href="#how">الإستخدام</a></li>
+      <li><a href="#contact">الخريطة</a></li>
+      <li><a href="#who">من نحن</a></li>
+      <li><a href="#what">مهامنا</a></li>
+      <li><a href="#services">التغطية</a></li>
+      <li><a href="./index.html">English</a></li>
+    </ul>
+  </nav>
+
+  <!-- The Header -->
+  <header id="showcase">
+    <div class="showcase-content">
+      <h1 class="largeHeading">
+        إعرف قبل أن تذهب 
+      </h1>
+      <p class="lead">
+        إستكشف الأماكن، وفِّر وقتك ، إذهب بالوقت المناسب 
+      </p>
+      <a href="#contact" class="btn">!إستكشف</a>
+    </div>
+  </header>
+
+  <!-- SECTION: How To Use -->
+  <section id="how" class="bg-light ypos-1">
+    <div class="container">
+      <h2 class="mediumHeading text-center"><span class="text-primary">طريقة </span>الإستخدام</h2>
+      <div class="items">
+        <div class="item">
+          <i class="fas fa-dice-three fa-2x"></i>
+          <div>
+            <h3>ثلاثة</h3>
+            <p> في خانة البحث و انتظر حتى ظهور النتائج IDضع الـ</p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-dice-two fa-2x"></i>
+          <div>
+            <h3>إثنان</h3>
+            <p> الخاص بالمكانID انسخ الـ</p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-dice-one fa-2x"></i>
+          <div>
+            <h3>واحد</h3>
+            <p>إستخدم خانة البحث للبحث عن المكان المطلوب</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The Map -->
+  <section id="contact">
+    <div class="contact-form bg-primary p-2">
+      <h2 class="mediumHeading">هل هنالك مكان تريد تغطيته ؟ <br> تواصل معنا </h2>
+      <form action="./php/db-connection.php" method="POST">
+        <div class="form-group">
+          <label for="name">الإسم</label>
+          <input type="text" name="name" id="name" placeholder="إسمك الكامل" required>
+        </div>
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" name="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">رقم الهاتف</label>
+          <input type="text" name="phone" id="phone" placeholder="أدخل رقم هاتفك">
+        </div>
+        <div class="form-group">
+          <label for="message">الرسالة</label>
+          <textarea name="message" id="message" placeholder="قم بكتابة رسالتك لنا" required> </textarea>
+        </div>
+        <input type="submit" value="Send" class="btn-dark btn">
+      </form>
+    </div>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div class="map"></div>
+    <div id="infowindow-content">
+        <span id="place-name" class="title"></span><br>
+        <strong>Place ID:</strong> <span id="place-id"></span><br>
+        <span id="place-address"></span>
+    </div>
+  </section>
+  <section>
+    <div class="c">
+      <div class="search-box">
+        <input type="text" class="search-box-input" placeholder="Please Insert PlaceID here">
+        <button class="search-box-btn">
+          <i class="search-box-icon fas fa-search fa-1x"></i>
+        </button>
+      </div>
+    </div>
+    </section>
+
+  <!-- SECTION: Who We Are -->
+  <section id="who" class="bg-light ypos-1">
+    <div class="container">
+      <h2 class="mediumHeading text-center"><span class="text-primary">من</span> نحن</h2>
+      <div class="items">
+        <div class="item">
+          <i class="fas fas fa-user-graduate fa-2x"></i>
+          <div>
+            <h3>معلوماتي</h3>
+            <p>هذا التطبيق تم عن طريق الطالب مهند رضا بالجامعة العربية المفتوحة كمشروع تخرج</p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-address-card fa-2x"></i>
+          <div>
+            <h3>السيرة الذاتية</h3>
+            <p>أسعى بأن تكون هذه هي نقطة بدايتي في عالم البرمجة من خلال هذا المشروع </p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-chalkboard-teacher fa-2x"></i>
+          <div>
+            <h3>أهدافي</h3>
+            <p>أطمح في أن أكمل دراستي وأن أصبح مُعلماً</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: What We Do -->
+  <section id="what">
+    <div class="what-img"></div>
+    <div class="what-text bg-dark p-2">
+      <h2 class="mediumHeading"><span class="text-primary">مهامُنا</h2>
+      <p>فكرة هذا المشروع هو عن طريق أخذ بعض خدمات الخرائط من مُزوِّديها مثل قوقل ماب و التعديل على بعض بياناتها لإظهار معلومات الأشخاص المتواجدين بداخل مبنى معين ، فعلى سبيل المثال إذا قام المستخدم بالضغط على مطعم معين سيظهر له عدد الأشخاص المتواجدين حالياً بالمطعم ، مما يُسهل عليه توفير وقته و الذهاب في الوقت المنافس ، أيضاً نسعى لعمل خريطة بها معلومات عن الطُرق مثل إزدحامها أو السرعة القصوى لكل طريق أو حالة الطريق</p>
+      <h3>خدماتنا</h3>
+      <ul class="list">
+        <li>معرفة عدد الأشخاص المتواجدين بداخل مكان ما </li>
+        <li> معرفة حالة الطريق </li>
+        <li>معرفة السرعة القصوى للطرق</li>
+        <li>تغطية مستمرة</li>
+        <li>و المزيد من الخدمات</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="ypos-1">
+    <div class="container">
+      <h2 class="mediumHeading text-center">
+        <span class="text-primary">التغطية</span> 
+      </h2>
+      <p class="small">نوفر خرائط لتغطية الأماكن التالية</p>
+      <div class="items ypos-1">
+        <div><img src="./images/mall.png" alt="Mall logo">
+        <span>الأسواق</span></div>
+        <div><img src="./images/office.png" alt="office logo"><span>المكاتب</span></div>
+        <div><img src="./images/university.png" alt="university logo"><span>الجامعات</span></div>
+        <div><img src="./images/hospitol.png" alt="hospitol logo"><span>المستشفيات</span></div>
+        <div><img src="./images/airport.png" alt="Airport logo"><span>المطارات</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="bg-dark text-center py-1">
+   <div class="container">
+      <p>Copyright &copy; 2019, Indoor Traffic System, All Rights Reserved</p>
+   </div>
+  </footer>
+
+  <!-- JQuery CDN -->
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Local Javascript File -->
+  <script src="./js/main.js"></script>
+
+  <!-- Google maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzPFbEBD3Nd4u7nwRomLGAky8xpGOeXaM&libraries=places&callback=initMap"
+    async defer></script>
+</body>
+</html> 

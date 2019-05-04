@@ -4,28 +4,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <!--the link element above is for icons and such from the site fontawesome.com-->
 
-  <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
-  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="css/widescreen.css">
+  <!--fontawesome.con CDN for icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  <!-- Main Styling File -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Mobile Styling File -->
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+
+  <!-- WideScreen Styling File -->
+  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="css/widescreen.css">
+
   <title>Indoor Traffic System</title>
 </head>
 <body id="home">
+
   <!-- The Navbar -->
   <nav id="navbar">
     <h1 class="logo">
       <span class="text-primary">
-        <i class="fas fa-city"></i> Indoor Traffic
-      </span>System
+      <a href="#home"><i class="fas fa-city"></i> Indoor Traffic
+      </span></a>System
     </h1>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#what">What</a></li>
+      <li></li>
+      <li><a href="#how">How</a></li>
+      <li><a href="#contact">Map</a></li>
       <li><a href="#who">Who</a></li>
-      <li><a href="#feedback">FeedBack</a></li>
+      <li><a href="#what">What</a></li>
+      <li><a href="#services">Layers</a></li>
+      <li><a href="./index-ar.html">Arabic</a></li>
     </ul>
   </nav>
+
+  <!-- The Header -->
+  <header id="showcase">
+    <div class="showcase-content">
+      <h1 class="largeHeading">
+        Know Before You Go 
+      </h1>
+      <p class="lead">
+        Indoor Traffic System is a Live Location Platform, which provide a custom map with a lot of features
+      </p>
+      <a href="#contact" class="btn">EXPLORE!</a>
+    </div>
+  </header>
+
+   <!-- SECTION: How To Use -->
+   <section id="how" class="bg-light ypos-1">
+    <div class="container">
+      <h2 class="mediumHeading text-center"><span class="text-primary">How</span> To Use</h2>
+      <div class="items">
+        <div class="item">
+          <i class="fas fa-dice-one fa-2x"></i>
+          <div>
+            <h3>One:</h3>
+            <p>Search your desired place in the search box.</p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-dice-two fa-2x"></i>
+          <div>
+            <h3>Two:</h3>
+            <p>Obtain the address Id and insert it with the button below.</p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-dice-three fa-2x"></i>
+          <div>
+            <h3>three:</h3>
+            <p>Click on "Send" and information should appear to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The Map -->
+  <section id="contact">
+    <div class="contact-form bg-primary p-2">
+      <h2 class="mediumHeading">Want To Cover a Place? <br> Contact Us </h2>
+      <form method="post" action="./php/db_connect.php" target="_blank">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter Email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Enter Message" required> </textarea>
+        </div>
+         <input type="submit" value="Send" class="btn-dark">
+      </form>
+      </div>
+      
+      <!-- Search bar for google maps -->
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div class="map"></div>
+    <!-- The Popup for the Place ID -->
+    <div id="infowindow-content">
+      <span id="place-name" class="title"></span><br>
+      <span id="place-id"></span><br>
+      <span id="place-address"></span>
+  </div>
+  </section>
+  <section>
+<div class="c">
+  <div class="search-box">
+    <input type="text" class="search-box-input" placeholder="Please Insert PlaceID here">
+    <button class="search-box-btn">
+      <i class="search-box-icon fas fa-search fa-1x"></i>
+    </button>
+  </div>
+</div>
+</section>
+
+  <!-- SECTION: Who We Are -->
+  <section id="who" class="bg-light ypos-1">
+    <div class="container">
+      <h2 class="mediumHeading text-center"><span class="text-primary">Who</span> We Are</h2>
+      <div class="items">
+        <div class="item">
+          <i class="fas fas fa-user-graduate fa-2x"></i>
+          <div>
+            <h3>Student</h3>
+            <p>This web application is made by a student in the Arab Open University by the name of: Muhannad Ridah Godah.</p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-address-card fa-2x"></i>
+          <div>
+            <h3>Portfolio Management</h3>
+            <p>This project is for my graduation from the university and also the starting point of my career, as i aim to be a full stack developer.</p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fas fa-chalkboard-teacher fa-2x"></i>
+          <div>
+            <h3>The Dream</h3>
+            <p>It is my goal to become a teacher and teach students the beauty of programming.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: What We Do -->
+  <section id="what">
+    <div class="what-img"></div>
+    <div class="what-text bg-dark p-2">
+      <h2 class="mediumHeading"><span class="text-primary">What</span> We Do</h2>
+      <p>Indoor Traffic System is a service built by using other map services and API keys from different sites, We offer a way to track traffic inside buildings and not that only, but we also offer other features like traffic on the streets, indoor mapping and many more features that we will like for you to use and benefit from it and also hear your feedback to improve them, our services are completely free.</p>
+      <h3>Services</h3>
+      <ul class="list">
+        <li>Navigation</li>
+        <li>Indoor mapping</li>
+        <li>Traffic</li>
+        <li>Speed limits</li>
+        <li>Directions</li>
+        <li>Searching box</li>
+        <li>And many more</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="ypos-1">
+    <div class="container">
+      <h2 class="mediumHeading text-center">
+        <span class="text-primary">Layers</span> For
+      </h2>
+      <p class="small">We provide a custom map that's showing some features for the following</p>
+      <div class="items ypos-1">
+        <div><img src="./images/mall.png" alt="Mall logo">
+        <span>Mall</span></div>
+        <div><img src="./images/office.png" alt="office logo"><span>Office</span></div>
+        <div><img src="./images/university.png" alt="university logo"><span>University</span></div>
+        <div><img src="./images/hospitol.png" alt="hospitol logo"><span>Hospitol</span></div>
+        <div><img src="./images/airport.png" alt="Airport logo"><span>Airport</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="bg-dark text-center py-1">
+   <div class="container">
+      <p>Copyright &copy; 2019, Indoor Traffic System, All Rights Reserved</p>
+   </div>
+  </footer>
+
+  <!-- JQuery CDN -->
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Local Javascript File -->
+  <script src="./js/main.js"></script>
+
+  <!-- Google maps API -->
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzPFbEBD3Nd4u7nwRomLGAky8xpGOeXaM&libraries=places&callback=initMap"
+    async defer></script>
 </body>
 </html> 
